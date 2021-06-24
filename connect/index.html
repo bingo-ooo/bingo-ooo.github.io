@@ -13,12 +13,21 @@
     .rules { font-size: 32px; padding: 20px 60px 20px 60px; } 
   </style>
   <script>
-    var mainLink="https://apps.apple.com/app/apple-store/id1496587361";
+    var mainLink="https://apps.apple.com/app/apple-store/id1496587361?pt=120963639&ct=connect&mt=8";
 
     function sss() {
       window.location.replace(mainLink);
     }
     function loaded() {
+      const queryString = window.location.search;    
+      const urlParams = new URLSearchParams(queryString);
+      var to = urlParams.get('to');
+      const regex = /^[a-z0-9_]{1,10}$/;
+      if (!to || !regex.test(to)) to='connect'; 
+      mainLink = `https://apps.apple.com/app/apple-store/id1496587361?pt=120963639&ct=${to}&mt=8`;
+      document.getElementById("link1").setAttribute("href",mainLink);
+      document.getElementById("link2").setAttribute("href",mainLink);
+      document.getElementById("link3").setAttribute("href",mainLink);
       setTimeout(sss, 2000)
     } 
     window.onload = loaded;

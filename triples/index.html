@@ -13,7 +13,7 @@
     .rules { font-size: 32px; padding: 20px 60px 20px 60px; } 
   </style>
   <script>
-    var mainLink="https://apps.apple.com/app/apple-store/id1562639504?pt=120963639&ct=trip0&mt=8";
+    var mainLink="https://apps.apple.com/app/apple-store/id1562639504?pt=127071244&ct=trip0&mt=8";
 
     function sss() {
       window.location.replace(mainLink);
@@ -24,7 +24,7 @@
       var to = urlParams.get('to');
       const regex = /^[a-z0-9_]{1,10}$/;
       if (!to || !regex.test(to)) to='trip0'; 
-      mainLink = `https://apps.apple.com/app/apple-store/id1562639504?pt=120963639&ct=${to}&mt=8`;
+      mainLink = `https://apps.apple.com/app/apple-store/id1562639504?pt=127071244&ct=${to}&mt=8`;
       document.getElementById("link1").setAttribute("href",mainLink);
       document.getElementById("link2").setAttribute("href",mainLink);
       document.getElementById("link3").setAttribute("href",mainLink);
